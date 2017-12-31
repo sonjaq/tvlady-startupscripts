@@ -1,0 +1,12 @@
+Description=Denon Receiver API server
+
+[Service]
+ExecStart=/bin/bash -c 'bin/client --port 8000 -s tvlady'
+WorkingDirectory=/home/pi/dev/denon-rest-api/node_modules/localtunnel
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
+
